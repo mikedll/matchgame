@@ -20,7 +20,7 @@ class CardModel {
             let randomNumber = arc4random_uniform(13) + 1
             
             // Log the number
-            print(randomNumber)
+            print("generating a random number \(randomNumber)")
             
             // Create first card object
             let cardOne = Card()
@@ -34,6 +34,7 @@ class CardModel {
             // Optional: Make it so we only have unique pairs of cards.
         }
         
+        print(generatedCardsArray.count)
         // TODO: Randomize the array
         
         // Return the array
