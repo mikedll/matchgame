@@ -15,6 +15,12 @@
 		B20CF9C52241AD2000CCFDFF /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CF9C42241AD2000CCFDFF /* CardModel.swift */; };
 		B20CF9C72241AE9F00CCFDFF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CF9C62241AE9F00CCFDFF /* Card.swift */; };
 		B20CF9C92241B27900CCFDFF /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CF9C82241B27900CCFDFF /* CardCollectionViewCell.swift */; };
+		B2B12BA62246AF3300227912 /* cardflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2B12BA22246AF3300227912 /* cardflip.wav */; };
+		B2B12BA72246AF3300227912 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2B12BA32246AF3300227912 /* dingwrong.wav */; };
+		B2B12BA82246AF3300227912 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2B12BA42246AF3300227912 /* dingcorrect.wav */; };
+		B2B12BA92246AF3300227912 /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = B2B12BA52246AF3300227912 /* shuffle.wav */; };
+		B2B12BAC2246AF7D00227912 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B12BAB2246AF7D00227912 /* AVFoundation.framework */; };
+		B2B12BAE2246AFC300227912 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B12BAD2246AFC300227912 /* SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		B20CF9C42241AD2000CCFDFF /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		B20CF9C62241AE9F00CCFDFF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B20CF9C82241B27900CCFDFF /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2B12BA22246AF3300227912 /* cardflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardflip.wav; sourceTree = "<group>"; };
+		B2B12BA32246AF3300227912 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
+		B2B12BA42246AF3300227912 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
+		B2B12BA52246AF3300227912 /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
+		B2B12BAB2246AF7D00227912 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B2B12BAD2246AFC300227912 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2B12BAC2246AF7D00227912 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +59,7 @@
 			children = (
 				B20CF9B12241A94300CCFDFF /* MatchApp */,
 				B20CF9B02241A94300CCFDFF /* Products */,
+				B2B12BAA2246AF7D00227912 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +74,38 @@
 		B20CF9B12241A94300CCFDFF /* MatchApp */ = {
 			isa = PBXGroup;
 			children = (
+				B2B12BA12246AF0A00227912 /* Sounds */,
 				B20CF9B22241A94300CCFDFF /* AppDelegate.swift */,
 				B20CF9B42241A94300CCFDFF /* ViewController.swift */,
 				B20CF9C42241AD2000CCFDFF /* CardModel.swift */,
 				B20CF9C62241AE9F00CCFDFF /* Card.swift */,
 				B20CF9C82241B27900CCFDFF /* CardCollectionViewCell.swift */,
+				B2B12BAD2246AFC300227912 /* SoundManager.swift */,
 				B20CF9B62241A94300CCFDFF /* Main.storyboard */,
 				B20CF9B92241A94500CCFDFF /* Assets.xcassets */,
 				B20CF9BB2241A94500CCFDFF /* LaunchScreen.storyboard */,
 				B20CF9BE2241A94500CCFDFF /* Info.plist */,
 			);
 			path = MatchApp;
+			sourceTree = "<group>";
+		};
+		B2B12BA12246AF0A00227912 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B2B12BA22246AF3300227912 /* cardflip.wav */,
+				B2B12BA42246AF3300227912 /* dingcorrect.wav */,
+				B2B12BA32246AF3300227912 /* dingwrong.wav */,
+				B2B12BA52246AF3300227912 /* shuffle.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		B2B12BAA2246AF7D00227912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2B12BAB2246AF7D00227912 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,8 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20CF9BD2241A94500CCFDFF /* LaunchScreen.storyboard in Resources */,
+				B2B12BA72246AF3300227912 /* dingwrong.wav in Resources */,
+				B2B12BA62246AF3300227912 /* cardflip.wav in Resources */,
+				B2B12BA92246AF3300227912 /* shuffle.wav in Resources */,
 				B20CF9BA2241A94500CCFDFF /* Assets.xcassets in Resources */,
 				B20CF9B82241A94300CCFDFF /* Main.storyboard in Resources */,
+				B2B12BA82246AF3300227912 /* dingcorrect.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +188,7 @@
 				B20CF9C52241AD2000CCFDFF /* CardModel.swift in Sources */,
 				B20CF9C92241B27900CCFDFF /* CardCollectionViewCell.swift in Sources */,
 				B20CF9C72241AE9F00CCFDFF /* Card.swift in Sources */,
+				B2B12BAE2246AFC300227912 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
